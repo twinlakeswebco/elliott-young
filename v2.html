@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Elliott Young with Signal One Realty. Personal real estate guidance for buyers and sellers in Bardstown and surrounding Kentucky communities.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Elliott Young | Signal One Realty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --red:#c8102e;
+      --red-bright:#ed1b34;
+      --ink:#151515;
+      --muted:#6b6b6b;
+      --line:#e7e2dc;
+      --paper:#f7f5f1;
+      --white:#fff;
+      --warm:#eee8df;
+      --shadow:0 24px 70px rgba(30,24,20,.12);
+      --serif:'Playfair Display',Georgia,serif;
+      --sans:'DM Sans',Arial,sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:var(--white);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    a:hover{text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+    .eyebrow{font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+    .section{padding:110px 0}
+    .section-title{font-family:var(--serif);font-size:clamp(2.35rem,5vw,4.5rem);line-height:1.05;letter-spacing:-.035em;margin:12px 0 22px}
+    .section-copy{max-width:590px;color:var(--muted);font-size:1.05rem}
+
+    .topline{background:var(--ink);color:#fff;font-size:.78rem;letter-spacing:.04em}
+    .topline .wrap{display:flex;justify-content:space-between;gap:24px;padding:9px 0}
+    .topline a{color:#fff}
+
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(231,226,220,.9)}
+    .nav{display:flex;align-items:center;gap:28px;min-height:88px}
+    .identity{display:flex;align-items:center;gap:18px;min-width:max-content}
+    .identity-name{font-family:var(--serif);font-size:1.55rem;font-weight:700;line-height:1}
+    .identity-name span{display:block;margin-top:7px;font:700 .68rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    .identity-divider{height:38px;width:1px;background:var(--line)}
+    .broker-logo img{width:94px;height:auto}
+    nav{margin-left:auto;display:flex;align-items:center;gap:28px;font-size:.9rem;font-weight:600}
+    nav a:not(.nav-cta){position:relative;padding:10px 0}
+    nav a:not(.nav-cta)::after{content:'';position:absolute;left:0;right:100%;bottom:5px;height:2px;background:var(--red);transition:right .2s ease}
+    nav a:not(.nav-cta):hover::after{right:0}
+    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--red);color:#fff;border:1px solid var(--red);padding:14px 21px;font-size:.86rem;font-weight:700;transition:.2s ease}
+    .nav-cta:hover,.button:hover{background:#a90c26;border-color:#a90c26;transform:translateY(-1px)}
+    .button.secondary{background:transparent;color:var(--ink);border-color:#cfc8bf}
+    .button.secondary:hover{background:var(--paper);border-color:#bfb6aa}
+
+    .hero{padding:74px 0 88px;background:linear-gradient(90deg,#fff 0%,#fff 59%,var(--paper) 59%,var(--paper) 100%);overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:72px}
+    .hero h1{font-family:var(--serif);font-size:clamp(3.4rem,7.2vw,6.8rem);line-height:.94;letter-spacing:-.055em;margin:14px 0 30px;font-weight:600}
+    .hero h1 em{font-weight:600;color:var(--red);font-style:italic}
+    .hero-copy>p{max-width:610px;color:#555;font-size:1.1rem;line-height:1.8;margin:0}
+    .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:34px}
+    .micro-proof{display:flex;flex-wrap:wrap;gap:24px;margin-top:38px;padding-top:27px;border-top:1px solid var(--line);color:#595959;font-size:.88rem}
+    .micro-proof span{display:flex;align-items:center;gap:9px}
+    .micro-proof span::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red)}
+
+    .portrait-wrap{position:relative;padding:18px 0 34px 28px}
+    .portrait-wrap::before{content:'';position:absolute;inset:0 35px 0 0;border:1px solid #d8d0c7;background:#ebe5dc;transform:translate(26px,25px)}
+    .portrait-card{position:relative;z-index:1;background:#ddd;box-shadow:var(--shadow);aspect-ratio:4/5;overflow:hidden}
+    .portrait-card img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .portrait-label{position:absolute;z-index:2;left:0;bottom:0;background:#fff;padding:19px 24px 17px;min-width:68%;border-top:4px solid var(--red)}
+    .portrait-label strong{font-family:var(--serif);font-size:1.45rem;display:block;line-height:1.1}
+    .portrait-label span{display:block;margin-top:6px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+    .intro-strip{border-block:1px solid var(--line);background:#fff}
+    .intro-strip .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+    .strip-item{padding:33px 34px;border-right:1px solid var(--line)}
+    .strip-item:first-child{padding-left:0}
+    .strip-item:last-child{border-right:0;padding-right:0}
+    .strip-item span{display:block;font-size:.71rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:7px}
+    .strip-item strong{font-family:var(--serif);font-size:1.3rem}
+
+    .ways{background:var(--paper)}
+    .ways-head{display:flex;justify-content:space-between;gap:60px;align-items:end;margin-bottom:52px}
+    .ways-head .section-copy{margin:0 0 8px}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{background:#fff;padding:38px 34px 36px;border:1px solid #ebe5dd;min-height:310px;display:flex;flex-direction:column;transition:.2s ease}
+    .service-card:hover{transform:translateY(-5px);box-shadow:0 16px 44px rgba(28,24,20,.08)}
+    .service-number{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#f4edef;color:var(--red);font-weight:700;font-size:.82rem}
+    .service-card h3{font-family:var(--serif);font-size:2rem;line-height:1.08;margin:25px 0 14px}
+    .service-card p{color:var(--muted);font-size:.96rem;margin:0 0 26px}
+    .card-link{margin-top:auto;color:var(--red);font-size:.84rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .card-link::after{content:' →';font-size:1rem}
+
+    .about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:92px;align-items:center}
+    .about-image{position:relative;background:var(--paper);padding:26px}
+    .about-image img{width:100%;aspect-ratio:1/1.15;object-fit:cover;object-position:center top}
+    .about-image::after{content:'SIGNAL ONE REALTY';position:absolute;right:-28px;bottom:42px;background:var(--red);color:#fff;padding:12px 18px;font-size:.7rem;font-weight:700;letter-spacing:.14em}
+    .about-copy p{color:var(--muted);font-size:1.04rem}
+    .about-copy .lead{font-family:var(--serif);font-size:1.6rem;line-height:1.45;color:var(--ink);margin-top:0}
+    .principles{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;margin:32px 0}
+    .principle{border-top:1px solid var(--line);padding-top:16px}
+    .principle strong{display:block;font-size:.95rem;margin-bottom:4px}
+    .principle span{color:var(--muted);font-size:.86rem}
+
+    .local{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+    .local::after{content:'';position:absolute;width:420px;height:420px;border:95px solid rgba(200,16,46,.16);border-radius:50%;right:-170px;top:-90px}
+    .local-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:86px;align-items:start}
+    .local .section-title{color:#fff}
+    .local .section-copy{color:#bdbdbd}
+    .market-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #333}
+    .market{padding:25px 0;border-bottom:1px solid #333}
+    .market:nth-child(odd){padding-right:30px;border-right:1px solid #333}
+    .market:nth-child(even){padding-left:30px}
+    .market span{display:block;color:#9e9e9e;font-size:.72rem;text-transform:uppercase;letter-spacing:.13em}
+    .market strong{display:block;margin-top:5px;font-family:var(--serif);font-size:1.45rem}
+
+    .contact{padding:100px 0;background:var(--red);color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+    .contact h2{font-family:var(--serif);font-size:clamp(2.8rem,5vw,5rem);line-height:1.02;letter-spacing:-.04em;margin:0}
+    .contact p{color:#f7ccd4;max-width:620px;font-size:1.03rem}
+    .contact-box{background:#fff;color:var(--ink);padding:34px 36px;box-shadow:0 22px 55px rgba(88,0,18,.18)}
+    .contact-box span{display:block;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+    .contact-box a.email{display:block;font-family:var(--serif);font-size:1.35rem;margin:7px 0 22px;overflow-wrap:anywhere}
+    .contact-box .button{width:100%}
+
+    footer{padding:52px 0 34px;background:#111;color:#d8d8d8}
+    .footer-main{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:45px;padding-bottom:35px}
+    .footer-brand strong{font-family:var(--serif);font-size:1.55rem;color:#fff}
+    .footer-main p,.footer-main a{font-size:.86rem;color:#a8a8a8}
+    .footer-main h4{font-size:.73rem;text-transform:uppercase;letter-spacing:.13em;color:#fff;margin:0 0 14px}
+    .footer-links{display:flex;flex-direction:column;gap:8px}
+    .footer-bottom{display:flex;justify-content:space-between;gap:24px;border-top:1px solid #292929;padding-top:22px;font-size:.72rem;color:#777}
+
+    .preview{position:fixed;right:18px;bottom:18px;z-index:30;background:#fff;color:#222;border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.12);padding:10px 14px;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .preview::before{content:'';display:inline-block;width:6px;height:6px;background:var(--red);border-radius:50%;margin-right:8px;vertical-align:1px}
+
+    @media(max-width:980px){
+      .hero{background:linear-gradient(180deg,#fff 0%,#fff 62%,var(--paper) 62%)}
+      .hero-grid,.about-grid,.local-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
+      .hero-copy{max-width:720px}
+      .portrait-wrap{max-width:610px}
+      .ways-head{display:block}.ways-head .section-copy{margin-top:18px}
+      .service-grid{grid-template-columns:1fr 1fr}.service-card:last-child{grid-column:1/-1}
+      .footer-main{grid-template-columns:1.2fr 1fr}
+      nav a:not(.nav-cta){display:none}
+    }
+
+    @media(max-width:680px){
+      .wrap{width:min(100% - 30px,1180px)}
+      .section{padding:78px 0}
+      .topline .wrap{display:block;text-align:center}.topline .wrap span{display:none}
+      .nav{min-height:76px;gap:12px}.identity-divider,.broker-logo{display:none}.identity-name{font-size:1.35rem}.nav-cta{margin-left:auto;padding:11px 14px}
+      .hero{padding-top:52px}.hero-grid{gap:40px}.hero h1{font-size:clamp(3.15rem,17vw,5rem)}
+      .portrait-wrap{padding-left:0}.portrait-wrap::before{right:10px}
+      .intro-strip .wrap{grid-template-columns:1fr}.strip-item,.strip-item:first-child,.strip-item:last-child{padding:22px 0;border-right:0;border-bottom:1px solid var(--line)}.strip-item:last-child{border-bottom:0}
+      .service-grid{grid-template-columns:1fr}.service-card:last-child{grid-column:auto}
+      .about-image::after{right:-8px}
+      .principles{grid-template-columns:1fr}
+      .market-list{grid-template-columns:1fr}.market:nth-child(odd),.market:nth-child(even){padding:20px 0;border-right:0}
+      .footer-main{grid-template-columns:1fr}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}
+      .preview{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">
+    <div class="wrap">
+      <span>Real estate guidance for Bardstown &amp; surrounding Kentucky communities</span>
+      <a href="mailto:elliott@signalonerealty.com">elliott@signalonerealty.com</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <a class="identity" href="#top" aria-label="Elliott Young home">
+        <div class="identity-name">Elliott Young<span>REALTOR® · Signal One Realty</span></div>
+        <div class="identity-divider" aria-hidden="true"></div>
+        <div class="broker-logo"><img src="assets/icon-brand.png" alt="Signal One Realty"></div>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#services">Buy &amp; Sell</a>
+        <a href="#about">About</a>
+        <a href="#area">Areas</a>
+        <a href="https://link.flexmls.com/1diaqj6ohfbs,16" target="_blank" rel="noopener">Search Homes</a>
+        <a class="nav-cta" href="#contact">Contact Elliott</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Elliott Young · Signal One Realty</div>
+          <h1>Your move.<br><em>Your priorities.</em></h1>
+          <p>Buying or selling a home is a big decision. Elliott keeps the process personal, straightforward, and centered on what matters to you from the first conversation through closing.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://link.flexmls.com/1diaqj6ohfbs,16" target="_blank" rel="noopener">Search available homes</a>
+            <a class="button secondary" href="#contact">Start a conversation</a>
+          </div>
+          <div class="micro-proof" aria-label="Real estate service highlights">
+            <span>Buyer representation</span>
+            <span>Seller representation</span>
+            <span>Local Kentucky service</span>
+          </div>
+        </div>
+
+        <div class="portrait-wrap">
+          <div class="portrait-card">
+            <img src="assets/Elliott.jpg" alt="Elliott Young, REALTOR with Signal One Realty" width="640" height="800" fetchpriority="high">
+            <div class="portrait-label">
+              <strong>Elliott Young</strong>
+              <span>REALTOR® · Signal One Realty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-strip" aria-label="Elliott Young service principles">
+      <div class="wrap">
+        <div class="strip-item"><span>01 · Personal</span><strong>Your goals come first.</strong></div>
+        <div class="strip-item"><span>02 · Clear</span><strong>No guessing about the next step.</strong></div>
+        <div class="strip-item"><span>03 · Local</span><strong>Guidance grounded in Kentucky.</strong></div>
+      </div>
+    </section>
+
+    <section class="section ways" id="services">
+      <div class="wrap">
+        <div class="ways-head">
+          <div>
+            <div class="eyebrow">How Elliott can help</div>
+            <h2 class="section-title">A plan for wherever<br>you’re headed next.</h2>
+          </div>
+          <p class="section-copy">You do not have to know every step before you start. Tell Elliott what you are trying to accomplish, and build the plan from there.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-number">01</div>
+            <h3>Buying a home</h3>
+            <p>Explore homes, narrow down what fits, schedule showings, and move through the offer and closing process with someone in your corner.</p>
+            <a class="card-link" href="https://link.flexmls.com/1diaqj6ohfbs,16" target="_blank" rel="noopener">Search homes</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Selling your home</h3>
+            <p>Start with your goals and timeline, then work through preparation, pricing, marketing, offers, and the steps that get you to closing.</p>
+            <a class="card-link" href="mailto:elliott@signalonerealty.com?subject=I%27m%20thinking%20about%20selling%20my%20home">Talk about selling</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">03</div>
+            <h3>Planning the move</h3>
+            <p>Not sure where to start? Ask about financing, local areas, timing, or what needs to happen before you are ready to buy or sell.</p>
+            <a class="card-link" href="mailto:elliott@signalonerealty.com?subject=I%27m%20planning%20a%20move">Ask Elliott</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="about-image">
+          <img src="assets/Elliott.jpg" alt="Elliott Young with Signal One Realty" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Meet Elliott</div>
+          <h2 class="section-title">Real estate should feel personal.</h2>
+          <p class="lead">Your agent should know what matters to you, communicate clearly, and make sure you understand what is happening before a decision gets made.</p>
+          <p>Elliott Young is a REALTOR® with Signal One Realty serving Bardstown and surrounding Kentucky communities. His approach is simple: listen first, be accessible, pay attention to the details, and keep the focus on the client.</p>
+          <p>Whether you are buying your first home, preparing to sell, or simply trying to figure out what your next move should look like, the conversation starts with your goals.</p>
+
+          <div class="principles">
+            <div class="principle"><strong>Accessible</strong><span>Questions are part of the process. Ask them.</span></div>
+            <div class="principle"><strong>Prepared</strong><span>Know the options before you make the decision.</span></div>
+            <div class="principle"><strong>Straightforward</strong><span>Clear communication without unnecessary pressure.</span></div>
+            <div class="principle"><strong>Client-focused</strong><span>The right move is the one that fits your goals.</span></div>
+          </div>
+
+          <a class="button secondary" href="mailto:elliott@signalonerealty.com">Email Elliott</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section local" id="area">
+      <div class="wrap local-grid">
+        <div>
+          <div class="eyebrow">Local coverage</div>
+          <h2 class="section-title">Find the place that fits the life you want.</h2>
+          <p class="section-copy">Looking around Bardstown or somewhere nearby? Elliott can help you start comparing homes, communities, commute considerations, and the things that matter to your everyday life.</p>
+        </div>
+        <div class="market-list">
+          <div class="market"><span>Home base</span><strong>Bardstown</strong></div>
+          <div class="market"><span>Serving</span><strong>Nelson County</strong></div>
+          <div class="market"><span>Serving</span><strong>Bullitt County</strong></div>
+          <div class="market"><span>Nearby</span><strong>Surrounding areas</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Start with a conversation.</h2>
+          <p>You do not need to have everything figured out first. Tell Elliott what you are considering, where you want to be, or what questions you have and start there.</p>
+        </div>
+        <div class="contact-box">
+          <span>Email Elliott</span>
+          <a class="email" href="mailto:elliott@signalonerealty.com">elliott@signalonerealty.com</a>
+          <a class="button" href="mailto:elliott@signalonerealty.com?subject=Real%20estate%20question">Send Elliott a message</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <strong>Elliott Young</strong>
+          <p>REALTOR® with Signal One Realty<br>Serving Bardstown and surrounding Kentucky communities.</p>
+        </div>
+        <div>
+          <h4>Brokerage</h4>
+          <p>Signal One Realty<br>637 N 3rd Street<br>Bardstown, KY 40004<br><a href="tel:+15028274863">(502) 827-4863</a></p>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="footer-links">
+            <a href="mailto:elliott@signalonerealty.com">Email Elliott</a>
+            <a href="https://www.facebook.com/elliott.young.12" target="_blank" rel="noopener">Elliott on Facebook</a>
+            <a href="https://www.facebook.com/Signalonerealty" target="_blank" rel="noopener">Signal One Realty on Facebook</a>
+            <a href="https://www.signalonerealty.com/" target="_blank" rel="noopener">Signal One Realty website</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Elliott Young · Signal One Realty</span>
+        <span>Equal Housing Opportunity</span>
+        <span>Preview website · Twin Lakes Web Co.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="preview">Twin Lakes Web Co. · V2 Preview</div>
+</body>
+</html>
