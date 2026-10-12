@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elliott Young Brand Guide</title>
+<link rel="stylesheet" href="brand-tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ey-cream); color: var(--s1-ink); font: 400 var(--fs-body)/var(--lh-body) var(--font-body); }
+  .wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-6); }
+  header.hero { background: var(--ey-navy); color: #fff; padding: var(--space-16) 0 var(--space-12); border-bottom: 6px solid var(--s1-red); }
+  .eyebrow { font: 600 0.8rem/1 var(--font-body); letter-spacing: 0.18em; text-transform: uppercase; color: #C9D2DE; }
+  h1, h2, h3 { font-family: var(--font-display); color: var(--ey-navy); line-height: 1.15; margin: 0 0 var(--space-4); }
+  header h1 { color: #fff; font-size: var(--fs-h1); margin-top: var(--space-3); }
+  h2 { font-size: var(--fs-h2); }
+  h3 { font-size: var(--fs-h3); }
+  header p { max-width: 60ch; color: #E3E8EF; }
+  section { padding: var(--space-12) 0; border-bottom: 1px solid #E4DED4; }
+  section > .wrap > p.lead { max-width: 70ch; }
+  .grid { display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .card { background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: var(--space-6); }
+  .swatch { border-radius: var(--radius-md); overflow: hidden; background: #fff; box-shadow: var(--shadow-card); }
+  .swatch .chip { height: 110px; }
+  .swatch .meta { padding: var(--space-4); font-size: var(--fs-small); }
+  .swatch .meta strong { display: block; font-size: 1rem; color: var(--ey-navy); }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: 0.85em; background: #EEE9E1; padding: 1px 6px; border-radius: 3px; }
+  .tag { display: inline-block; font: 600 0.7rem/1 var(--font-body); letter-spacing: .08em; text-transform: uppercase; padding: 4px 8px; border-radius: 2px; margin-bottom: 8px; }
+  .tag.src { background: #FCE4E7; color: #A50D25; }
+  .tag.new { background: #E3E8EF; color: var(--ey-navy); }
+  .logo-box { background: #fff; display: flex; align-items: center; justify-content: center; height: 180px; border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: var(--space-4); }
+  .logo-box.dark { background: var(--ey-navy); }
+  .logo-box img { max-width: 100%; max-height: 100%; }
+  table { width: 100%; border-collapse: collapse; background: #fff; box-shadow: var(--shadow-card); border-radius: var(--radius-md); overflow: hidden; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid #EEE9E1; vertical-align: top; font-size: 0.95rem; }
+  th { background: var(--ey-navy); color: #fff; font-weight: 600; }
+  .type-sample { background: #fff; padding: var(--space-8); border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+  .lockup { display: flex; align-items: center; gap: var(--space-6); flex-wrap: wrap; background: #fff; padding: var(--space-8); border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+  .lockup .name { font-family: var(--font-display); font-size: 2.4rem; color: var(--ey-navy); line-height: 1; }
+  .lockup .sub { font: 600 0.8rem/1.4 var(--font-body); letter-spacing: .2em; text-transform: uppercase; color: var(--ey-slate); margin-top: 8px; }
+  .lockup .rule { width: 2px; align-self: stretch; background: var(--s1-red); }
+  .lockup img { height: 64px; }
+  .btn-row { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-4); }
+  .note { border-left: 4px solid var(--ey-bourbon); background: #fff; padding: var(--space-4) var(--space-6); margin-top: var(--space-6); }
+  ol li, ul li { margin-bottom: 6px; }
+  footer { padding: var(--space-8) 0; font-size: var(--fs-small); color: var(--ey-slate); }
+  @media (max-width: 600px) { .lockup .rule { display: none; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Brand Guide v0.1 · Twin Lakes Web Co. · October 2026</div>
+    <h1>Elliott Young, REALTOR®</h1>
+    <p>Personal agent website brand, built as a sub-brand of Signal One Realty (Bardstown, KY). Brokerage colors, logo, and type were pulled from signalonerealty.com; the personal palette and voice below are a proposed starting point for Elliott to approve.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>1. Brand Position</h2>
+    <p class="lead">Signal One was founded by a retired law enforcement officer, and the name itself is a radio call. Elliott shares that background, which gives the site a natural, credible angle: a former officer who brings the same service-first discipline, attention to detail, and clear communication to buying and selling a home in Nelson County.</p>
+    <div class="grid" style="margin-top:24px">
+      <div class="card"><h3>Who he is</h3><p>Bullitt County native, in Bardstown 7+ years. Christian, husband, father. Policing background. Strengths named in his bio: communication, attention to detail, negotiation.</p></div>
+      <div class="card"><h3>Who it's for</h3><p>Families and first-time buyers in Nelson, Bullitt, and surrounding counties. Sellers who want a responsive, detail-oriented agent. Fellow first responders relocating to or within the area.</p></div>
+      <div class="card"><h3>Core promise</h3><p><em>"Service first. Clear answers. Every step."</em> Working tagline: placeholder for Elliott's input.</p></div>
+      <div class="card"><h3>Local flavor</h3><p>Bardstown is the Bourbon Capital of the World and a historic small town. The warm bourbon accent and serif headings lean into that heritage without becoming a theme park.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>2. Logos</h2>
+    <p class="lead">These load directly from the brokerage site. Download the originals using the links in <code>assets/ASSET-SOURCES.md</code> and save them into <code>assets/</code>. Elliott does not have a personal logo yet; a type-based lockup is proposed below so the site can launch without one.</p>
+    <div class="grid" style="margin-top:24px">
+      <div>
+        <div class="logo-box"><img src="https://static.wixstatic.com/media/7b7c6b_4d159996b3c9401681974925bbe70936~mv2.png" alt="Signal One icon"></div>
+        <p><span class="tag src">Brokerage</span><br><strong>Signal One icon</strong> (ICON ONLY-13.png). Used as favicon and social image on their site.</p>
+      </div>
+      <div>
+        <div class="logo-box"><img src="https://static.wixstatic.com/media/f677a6_10963860e1aa40929c68c0197e5e8caf~mv2.png" alt="Signal One header logo"></div>
+        <p><span class="tag src">Brokerage</span><br><strong>Signal One header logo</strong>. Top-of-page logo on their homepage.</p>
+      </div>
+      <div>
+        <div class="logo-box dark"><img src="https://static.wixstatic.com/media/7b7c6b_4d159996b3c9401681974925bbe70936~mv2.png" alt="Signal One icon on navy"></div>
+        <p><span class="tag new">Test</span><br><strong>Icon on navy</strong>. Check legibility here before using the icon in the dark footer. Request a reversed (white) version from Joedy if this does not hold up.</p>
+      </div>
+      <div>
+        <div class="logo-box" style="padding:0;overflow:hidden"><img src="https://static.wixstatic.com/media/f677a6_b27af30e0fde4e43999657120f9bf67b~mv2.jpg" alt="Elliott Young headshot" style="height:100%;object-fit:cover"></div>
+        <p><span class="tag src">Brokerage</span><br><strong>Current headshot</strong> (Elliott.jpg). Low resolution on their site; get the original file or a new shoot for the hero.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px">Proposed personal lockup</h3>
+    <div class="lockup">
+      <div>
+        <div class="name">Elliott Young</div>
+        <div class="sub">REALTOR® · Bardstown, Kentucky</div>
+      </div>
+      <div class="rule"></div>
+      <img src="https://static.wixstatic.com/media/f677a6_10963860e1aa40929c68c0197e5e8caf~mv2.png" alt="Signal One Realty">
+    </div>
+    <p style="margin-top:12px">Name set in Fraunces 700, descriptor in Raleway 600 uppercase with wide tracking, divided from the brokerage logo by a 2px Signal One red rule. The brokerage logo must stay visible and legible in every header lockup.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>3. Color</h2>
+    <p class="lead">Brokerage colors were extracted from the live site's CSS. Signal One red is the shared thread with the brokerage; navy carries Elliott's personal brand. Note that the brokerage site also uses <code>#170DF2</code> and <code>#0000EE</code>, which are default link/theme blues from the Wix template rather than intentional brand colors, so they are left out.</p>
+
+    <h3 style="margin-top:32px">From Signal One Realty</h3>
+    <div class="grid">
+      <div class="swatch"><div class="chip" style="background:#ED1B34"></div><div class="meta"><span class="tag src">Scraped</span><strong>Signal One Red</strong><code>#ED1B34</code><br>Accents, icons, rules, large headings. 4.37:1 on white, so not for small text or white-on-red buttons.</div></div>
+      <div class="swatch"><div class="chip" style="background:#C8102E"></div><div class="meta"><span class="tag new">Derived</span><strong>Signal Red Strong</strong><code>#C8102E</code><br>Button fill with white text. 5.88:1, passes WCAG AA.</div></div>
+      <div class="swatch"><div class="chip" style="background:#313131"></div><div class="meta"><span class="tag src">Scraped</span><strong>Ink</strong><code>#313131</code><br>Body text. 11.9:1 on cream.</div></div>
+      <div class="swatch"><div class="chip" style="background:#F4F5F7"></div><div class="meta"><span class="tag src">Scraped</span><strong>Mist</strong><code>#F4F5F7</code><br>Brokerage background gray. Use for form fields and listing cards.</div></div>
+    </div>
+
+    <h3 style="margin-top:32px">Elliott's personal palette</h3>
+    <div class="grid">
+      <div class="swatch"><div class="chip" style="background:#1B2A41"></div><div class="meta"><span class="tag new">Proposed</span><strong>Patrol Navy</strong><code>#1B2A41</code><br>Primary. Header, footer, hero overlay, headings. 14.4:1 with white.</div></div>
+      <div class="swatch"><div class="chip" style="background:#B5762A"></div><div class="meta"><span class="tag new">Proposed</span><strong>Bourbon</strong><code>#B5762A</code><br>Warm decorative accent: dividers, icons, badges. Not for text.</div></div>
+      <div class="swatch"><div class="chip" style="background:#8A5A1F"></div><div class="meta"><span class="tag new">Proposed</span><strong>Bourbon Deep</strong><code>#8A5A1F</code><br>Accent when it must be text or a link. 5.9:1.</div></div>
+      <div class="swatch"><div class="chip" style="background:#5B6573"></div><div class="meta"><span class="tag new">Proposed</span><strong>Slate</strong><code>#5B6573</code><br>Captions, meta text, secondary info. 5.9:1.</div></div>
+      <div class="swatch"><div class="chip" style="background:#F7F4EF"></div><div class="meta"><span class="tag new">Proposed</span><strong>Cream</strong><code>#F7F4EF</code><br>Page background. Warmer than the brokerage gray.</div></div>
+    </div>
+
+    <h3 style="margin-top:32px">Usage ratio</h3>
+    <div style="display:flex;height:40px;border-radius:4px;overflow:hidden;box-shadow:var(--shadow-card)">
+      <div style="flex:60;background:#F7F4EF"></div><div style="flex:25;background:#1B2A41"></div><div style="flex:8;background:#313131"></div><div style="flex:5;background:#C8102E"></div><div style="flex:2;background:#B5762A"></div>
+    </div>
+    <p>Roughly 60 cream/white, 25 navy, 8 ink, 5 red, 2 bourbon. Red is the signal: calls to action and the brokerage tie-in, never large fills. Red on navy (3.3:1) is acceptable only for large display text or graphics.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>4. Typography</h2>
+    <p class="lead">Raleway is the brokerage's paragraph font, so it stays as the body face to keep the two sites related. Fraunces adds a warmer, established serif for headings that sets Elliott's site apart from the brokerage template. Both are free on Google Fonts.</p>
+    <div class="type-sample" style="margin-top:24px">
+      <div class="eyebrow" style="color:var(--ey-slate)">Fraunces 700 · Display / H1</div>
+      <div style="font-family:var(--font-display);font-weight:700;font-size:var(--fs-h1);color:var(--ey-navy);line-height:1.1;margin:8px 0 24px">Find your place in Bardstown.</div>
+      <div class="eyebrow" style="color:var(--ey-slate)">Fraunces 500 · H2</div>
+      <div style="font-family:var(--font-display);font-weight:500;font-size:var(--fs-h2);color:var(--ey-navy);margin:8px 0 24px">Homes for sale in Nelson County</div>
+      <div class="eyebrow" style="color:var(--ey-slate)">Raleway 600 uppercase · Eyebrow / Nav / Buttons</div>
+      <div style="font:600 .9rem/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;margin:8px 0 24px">Buy · Sell · About · Contact</div>
+      <div class="eyebrow" style="color:var(--ey-slate)">Raleway 400 · Body 17px / 1.65</div>
+      <p style="max-width:65ch;margin-top:8px">Elliott comes from a policing background with a service-first, communication-oriented mentality, making sure every question is answered and every detail is handled from the first showing to the closing table.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>5. Components</h2>
+    <p class="lead">Square-ish corners (2px) carry over from the brokerage's square buttons. Uppercase, tracked button labels.</p>
+    <div class="btn-row">
+      <button class="btn-primary">Let's Talk</button>
+      <button class="btn-secondary">Search Homes</button>
+    </div>
+    <div class="grid" style="margin-top:32px">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div style="height:150px;background:linear-gradient(135deg,#1B2A41,#5B6573)"></div>
+        <div style="padding:20px">
+          <div style="font:600 .75rem/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#C8102E">For Sale</div>
+          <div style="font-family:var(--font-display);font-size:1.6rem;color:var(--ey-navy);margin:8px 0 4px">$289,900</div>
+          <div style="color:var(--ey-slate);font-size:.95rem">123 Example St, Bardstown, KY</div>
+          <div style="font-size:.9rem;margin-top:8px">3 bd · 2 ba · 1,850 sq ft</div>
+        </div>
+      </div>
+      <div class="card" style="background:var(--ey-navy);color:#fff">
+        <div style="font:600 .75rem/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#B5762A">Why Elliott</div>
+        <p style="font-family:var(--font-display);font-size:1.35rem;line-height:1.35;margin:12px 0">"Service first. Clear answers. Every step."</p>
+        <div style="height:2px;width:48px;background:#ED1B34"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>6. Voice</h2>
+    <table>
+      <tr><th style="width:22%">Trait</th><th>Sounds like</th><th>Avoid</th></tr>
+      <tr><td><strong>Direct</strong></td><td>"Here's what happens next, and when."</td><td>Hype, "dream home" clichés, exclamation points</td></tr>
+      <tr><td><strong>Steady</strong></td><td>"I'll keep you updated at every step, even when there's nothing new."</td><td>Pressure language, artificial urgency</td></tr>
+      <tr><td><strong>Local</strong></td><td>Specific neighborhoods, schools, roads, and towns by name</td><td>Generic "great community" filler</td></tr>
+      <tr><td><strong>Personal</strong></td><td>First person, family man, faith stated plainly in the About page in his own words</td><td>Corporate "we" on personal pages</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>7. Site Requirements</h2>
+    <p class="lead">Items to confirm before build, since an agent site is advertising under the brokerage's license.</p>
+    <ol>
+      <li><strong>Brokerage identification.</strong> Kentucky real estate advertising must identify the brokerage. Put "Signal One Realty" with the brokerage phone and office address in the header lockup and footer of every page, and get Joedy Gilliland's (principal broker) sign-off on the site before launch.</li>
+      <li><strong>Equal Housing Opportunity</strong> logo and statement in the footer.</li>
+      <li><strong>REALTOR® mark.</strong> All caps with ® when used as a title; only if Elliott is a current NAR member.</li>
+      <li><strong>Listings / IDX.</strong> The brokerage links out to Flexmls and Homes.com. Decide whether Elliott gets his own Flexmls IDX feed or links to the brokerage search.</li>
+      <li><strong>Brand approval.</strong> Ask the brokerage for vector logos (SVG/EPS), a reversed white version, and any existing usage rules.</li>
+    </ol>
+    <div class="note"><strong>Open items for Elliott:</strong> direct phone number, preferred domain (e.g. elliottyoungrealty.com), new headshots, service area list, testimonials from real clients, social profiles, and whether he wants a personal monogram logo in a later phase.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Prepared by Twin Lakes Web Co. Source data scraped from signalonerealty.com on October 12, 2026. Tokens live in <code>brand-tokens.css</code>.</div>
+</footer>
+</body>
+</html>

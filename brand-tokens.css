@@ -1,0 +1,56 @@
+/* Elliott Young, REALTOR® | Signal One Realty
+   Starter design tokens (v0.1, 2026-10-12)
+   Source colors scraped from signalonerealty.com; extended palette is proposed. */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Raleway:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brokerage colors (from signalonerealty.com) */
+  --s1-red: #ED1B34;          /* Signal One primary. Large text, icons, accents only (4.37:1 on white). */
+  --s1-red-strong: #C8102E;   /* Accessible red for buttons with white text (5.88:1). */
+  --s1-ink: #313131;          /* Site body text color. */
+  --s1-mist: #F4F5F7;         /* Site background gray. */
+
+  /* Proposed personal palette for Elliott */
+  --ey-navy: #1B2A41;         /* Primary brand color. Headers, footer, hero overlay (14.4:1 with white). */
+  --ey-slate: #5B6573;        /* Secondary text, captions (5.9:1 on white). */
+  --ey-bourbon: #B5762A;      /* Warm accent, decorative only (3.76:1, not for small text). */
+  --ey-bourbon-deep: #8A5A1F; /* Accent when used as text or link (5.9:1). */
+  --ey-cream: #F7F4EF;        /* Page background / alternating sections. */
+  --ey-white: #FFFFFF;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Raleway', Arial, Helvetica, sans-serif;  /* Matches brokerage site */
+
+  --fs-h1: clamp(2.25rem, 5vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 3.5vw, 2.5rem);
+  --fs-h3: 1.375rem;
+  --fs-body: 1.0625rem;       /* 17px, same as brokerage body size */
+  --fs-small: 0.875rem;
+  --lh-body: 1.65;
+
+  /* Spacing (4px base, same as brokerage) */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-6: 24px; --space-8: 32px; --space-12: 48px; --space-16: 64px; --space-24: 96px;
+
+  /* Shape */
+  --radius-sm: 2px;           /* Brokerage uses square buttons; keep corners tight */
+  --radius-md: 4px;
+  --shadow-card: 0 2px 12px rgba(27, 42, 65, 0.08);
+  --container: 1200px;
+}
+
+/* Base button styles */
+.btn-primary {
+  background: var(--s1-red-strong); color: var(--ey-white);
+  font: 600 0.9375rem/1 var(--font-body); letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 16px 28px; border: 0; border-radius: var(--radius-sm);
+}
+.btn-primary:hover { background: #A50D25; }
+.btn-secondary {
+  background: transparent; color: var(--ey-navy);
+  font: 600 0.9375rem/1 var(--font-body); letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 14px 26px; border: 2px solid var(--ey-navy); border-radius: var(--radius-sm);
+}
+.btn-secondary:hover { background: var(--ey-navy); color: var(--ey-white); }
