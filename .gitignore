@@ -1,0 +1,8 @@
+# Private client proposal documents
+/Proposal/
+
+# Temporary document-generation files
+/tmp/pdfs/
+
+# macOS metadata
+.DS_Store

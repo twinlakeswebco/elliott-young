@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-12T19:39:01.908Z",
+        "reason": "All instances are 11px uppercase, letterspaced UI tags/labels (dispatch bar, wordmark tagline, case/coverage tags, signoff, promise band, preview badge) — not reading-length body prose. Real paragraph content on this page is 13-17px. Already meets the sibling undersized-ui-text rule's explicit 11px functional-text floor."
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-12T19:39:01.924Z",
+        "reason": "user confirmed: explicit brief requested a red/blue flashing light bar; the lens glow represents an actual light-emitting element (the direction contract's named signature interaction), not decorative chrome. Flash rate throttled to ~0.6Hz and disabled under prefers-reduced-motion."
+      }
+    ]
+  }
+}

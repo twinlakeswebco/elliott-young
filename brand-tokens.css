@@ -1,56 +1,63 @@
 /* Elliott Young, REALTOR® | Signal One Realty
-   Starter design tokens (v0.1, 2026-10-12)
-   Source colors scraped from signalonerealty.com; extended palette is proposed. */
+   Patrol-dispatch design tokens (v0.2, 2026-10-12)
+   Signal One red is scraped brand fact from signalonerealty.com and stays fixed;
+   the personal "duty console" system below is Elliott's own layer. */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400..900&family=Chakra+Petch:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Brokerage colors (from signalonerealty.com) */
+  /* Brokerage colors (from signalonerealty.com) — fixed brand fact */
   --s1-red: #ED1B34;          /* Signal One primary. Large text, icons, accents only (4.37:1 on white). */
   --s1-red-strong: #C8102E;   /* Accessible red for buttons with white text (5.88:1). */
-  --s1-ink: #313131;          /* Site body text color. */
-  --s1-mist: #F4F5F7;         /* Site background gray. */
 
-  /* Proposed personal palette for Elliott */
-  --ey-navy: #1B2A41;         /* Primary brand color. Headers, footer, hero overlay (14.4:1 with white). */
-  --ey-slate: #5B6573;        /* Secondary text, captions (5.9:1 on white). */
+  /* Ground / steel tiers (dark "duty console" base) */
+  --ink: #0B0D10;             /* Page ground. */
+  --steel: #171C22;           /* Panel / header ground, one step up from ink. */
+  --steel-2: #232A33;         /* Borders, dividers, hover fills on dark panels. */
+  --steel-3: #323B46;         /* Lighter steel for rules on dark panels. */
+
+  /* Legacy navy, retained for text-on-cream and as a secondary deep accent */
+  --ey-navy: #1B2A41;         /* 14.4:1 with white; used on cream cards. */
+
+  /* Patrol accents — full palette roles, not sprinkles */
+  --patrol-blue: #3B63FF;     /* Light-bar blue / large-scale decorative, borders, icons on dark ground (non-text 3:1 use). */
+  --patrol-blue-text: #8AA0FF; /* Text-safe blue on ink/steel (5.3:1 on ink). */
+  --patrol-blue-deep: #17308F; /* Text/link-safe blue (7.9:1 on white, 5.3:1 on cream). */
+  --s1-red-bright: #FF5A6B;   /* Text-safe red on ink/steel (5.1:1 on ink, 4.6:1 on steel). */
+  --patrol-paper: #ECEEF1;    /* Primary text on dark ground (15.7:1 on ink). */
+  --patrol-fog: #AFBCC9;      /* Secondary text on dark ground, tinted blue-gray, never plain gray (7.2:1 on ink). */
+
+  /* Duty tan / leather — repurposed from the old "bourbon" accent for stitched/canvas details */
   --ey-bourbon: #B5762A;      /* Warm accent, decorative only (3.76:1, not for small text). */
-  --ey-bourbon-deep: #8A5A1F; /* Accent when used as text or link (5.9:1). */
-  --ey-cream: #F7F4EF;        /* Page background / alternating sections. */
+  --ey-bourbon-deep: #8A5A1F; /* Text-safe tan on light/cream surfaces (5.9:1 on white). */
+  --ey-bourbon-light: #D9A463; /* Text-safe tan on dark ground (8.6:1 on ink). */
+
+  /* Paper — "case file" surface docked on the dark ground for legibility */
+  --ey-cream: #F7F4EF;
+  --ey-cream-2: #EFE9DF;      /* Slightly deeper paper tone for recessed fields on a cream card. */
   --ey-white: #FFFFFF;
 
-  /* Typography */
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Raleway', Arial, Helvetica, sans-serif;  /* Matches brokerage site */
+  /* Typography — stencil display / technical UI face / plain official body */
+  --font-display: 'Big Shoulders Stencil Display', 'Arial Narrow', sans-serif;
+  --font-ui: 'Chakra Petch', 'Segoe UI', sans-serif;
+  --font-body: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
 
-  --fs-h1: clamp(2.25rem, 5vw, 3.5rem);
-  --fs-h2: clamp(1.75rem, 3.5vw, 2.5rem);
-  --fs-h3: 1.375rem;
-  --fs-body: 1.0625rem;       /* 17px, same as brokerage body size */
+  --fs-h1: clamp(2.75rem, 6vw, 5.5rem);
+  --fs-h2: clamp(2rem, 4vw, 3.25rem);
+  --fs-h3: 1.5rem;
+  --fs-body: 1.0625rem;
   --fs-small: 0.875rem;
-  --lh-body: 1.65;
+  --lh-body: 1.7;
 
-  /* Spacing (4px base, same as brokerage) */
+  /* Spacing (4px base) */
   --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
   --space-6: 24px; --space-8: 32px; --space-12: 48px; --space-16: 64px; --space-24: 96px;
 
-  /* Shape */
-  --radius-sm: 2px;           /* Brokerage uses square buttons; keep corners tight */
-  --radius-md: 4px;
-  --shadow-card: 0 2px 12px rgba(27, 42, 65, 0.08);
+  /* Shape — hardware-leaning, mostly sharp, one chamfer as a signature cut */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --chamfer: 14px;            /* Single clipped-corner cut used on commands and the portrait frame. */
+  --shadow-panel: 0 14px 34px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 10px 24px rgba(11, 13, 16, 0.18);
   --container: 1200px;
 }
-
-/* Base button styles */
-.btn-primary {
-  background: var(--s1-red-strong); color: var(--ey-white);
-  font: 600 0.9375rem/1 var(--font-body); letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 16px 28px; border: 0; border-radius: var(--radius-sm);
-}
-.btn-primary:hover { background: #A50D25; }
-.btn-secondary {
-  background: transparent; color: var(--ey-navy);
-  font: 600 0.9375rem/1 var(--font-body); letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 14px 26px; border: 2px solid var(--ey-navy); border-radius: var(--radius-sm);
-}
-.btn-secondary:hover { background: var(--ey-navy); color: var(--ey-white); }
